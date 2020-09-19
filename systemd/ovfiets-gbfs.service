@@ -1,0 +1,11 @@
+[Unit]
+Description=OV-fiets GBFS
+After=syslog.target network.target
+
+[Service]
+User=ovfiets
+Restart=always
+ExecStart=/home/projects/gbfs.openov.nl/src/ovfiets-to-gbfs.py
+
+[Install]
+WantedBy=multi-user.target

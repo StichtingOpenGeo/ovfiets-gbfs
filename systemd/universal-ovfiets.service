@@ -1,0 +1,11 @@
+[Unit]
+Description=Universal OV fiets
+After=syslog.target network.target
+
+[Service]
+User=universal
+Restart=always
+ExecStart=/opt/universal/bin/universal-sub-xpubxsub tcp://vid.openov.nl:6703 tcp://127.0.0.1:6703
+
+[Install]
+WantedBy=multi-user.target
